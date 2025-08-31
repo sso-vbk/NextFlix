@@ -3,138 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NextFlix - Jouw Filmplatform</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <title>Admin Dashboard - NextFlix</title>
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
-<body>
-    <header>
-        <nav class="main-nav">
-            <div class="nav-container">
-                <h1 class="logo">NextFlix</h1>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">Over Ons</a></li>
-                    <li><a href="admin/login.html">Admin</a></li>
+<body class="admin-body">
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <h2 class="admin-logo">NextFlix Admin</h2>
+            <nav class="admin-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Dashboard</a></li>
+                    <li><a href="manage-movies.html">Films Beheren</a></li>
+                    <li><a href="about.html">Over</a></li>
+                    <li><a href="../index.html">Terug naar Site</a></li>
+                    <li><a href="login.html">Uitloggen</a></li>
                 </ul>
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </aside>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h2>Welkom bij NextFlix</h2>
-                <p>Ontdek duizenden films, series en documentaires. Jouw entertainment begint hier!</p>
-                <button class="cta-button">Start Nu</button>
-            </div>
-        </section>
-
-        <section class="film-section">
-            <div class="container">
-                <h2>Populaire Films</h2>
-                <div class="film-grid">
-                    <article class="film-card">
-                        <img src="https://images.unsplash.com/photo-1653392439276-984b2a2191f0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Inception">
-                        <div class="film-info">
-                            <h3>Inception</h3>
-                            <p class="year">2010</p>
-                            <p class="rating">★★★★★</p>
-                        </div>
-                    </article>
-                    
-                    <article class="film-card">
-                        <img src="https://plus.unsplash.com/premium_photo-1682124752476-40db22034a58?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Interstellar">
-                        <div class="film-info">
-                            <h3>Interstellar</h3>
-                            <p class="year">2014</p>
-                            <p class="rating">★★★★★</p>
-                        </div>
-                    </article>
-                    
-                    <article class="film-card">
-                        <img src="https://plus.unsplash.com/premium_photo-1673688152102-b24caa6e8725?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="The Matrix">
-                        <div class="film-info">
-                            <h3>The Matrix</h3>
-                            <p class="year">1999</p>
-                            <p class="rating">★★★★★</p>
-                        </div>
-                    </article>
-                    
-                    <article class="film-card">
-                        <img src="https://images.unsplash.com/photo-1542384701-c0e46e0eda04?q=80&w=690&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Avatar">
-                        <div class="film-info">
-                            <h3>Avatar</h3>
-                            <p class="year">2009</p>
-                            <p class="rating">★★★★☆</p>
-                        </div>
-                    </article>
-                    
-                    <article class="film-card">
-                        <img src="https://images.unsplash.com/photo-1682686580950-960d1d513532?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dune">
-                        <div class="film-info">
-                            <h3>Dune</h3>
-                            <p class="year">2021</p>
-                            <p class="rating">★★★★☆</p>
-                        </div>
-                    </article>
-                    
-                    <article class="film-card">
-                        <img src="https://images.unsplash.com/photo-1620510625142-b45cbb784397?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Joker">
-                        <div class="film-info">
-                            <h3>Joker</h3>
-                            <p class="year">2019</p>
-                            <p class="rating">★★★★☆</p>
-                        </div>
-                    </article>
-                    
-                    <article class="film-card">
-                        <img src="https://plus.unsplash.com/premium_photo-1661963989923-17181d237cef?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Gladiator">
-                        <div class="film-info">
-                            <h3>Gladiator</h3>
-                            <p class="year">2000</p>
-                            <p class="rating">★★★★★</p>
-                        </div>
-                    </article>
-                    
-                    <article class="film-card">
-                        <img src="https://images.unsplash.com/photo-1631556094767-3754d8d5bb91?q=80&w=770&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Parasite">
-                        <div class="film-info">
-                            <h3>Parasite</h3>
-                            <p class="year">2019</p>
-                            <p class="rating">★★★★★</p>
-                        </div>
-                    </article>
+        <main class="admin-main">
+            <header class="admin-header">
+                <h1>Dashboard</h1>
+                <div class="admin-user">
+                    <span>Admin User</span>
                 </div>
-            </div>
-        </section>
-    </main>
+            </header>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>NextFlix</h3>
-                <p>Jouw ultieme filmervaring</p>
-            </div>
-            <div class="footer-section">
-                <h4>Links</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">Over Ons</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Volg Ons</h4>
-                <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Instagram</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 NextFlix. Alle rechten voorbehouden.</p>
-        </div>
-    </footer>
+            <section class="dashboard-stats">
+                <div class="stat-card">
+                    <h3>Totaal Films</h3>
+                    <p class="stat-number">842</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Actieve Gebruikers</h3>
+                    <p class="stat-number">15,234</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Reviews</h3>
+                    <p class="stat-number">3,421</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Nieuwe Films</h3>
+                    <p class="stat-number">23</p>
+                </div>
+            </section>
+
+            <section class="admin-search">
+                <h2>Films Zoeken</h2>
+                <div class="search-container">
+                    <input type="text" placeholder="Zoek op titel, genre, jaar..." class="admin-search-input">
+                    <button class="search-button">Zoeken</button>
+                </div>
+            </section>
+
+            <section class="recent-movies">
+                <h2>Recent Toegevoegde Films</h2>
+                <div class="table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Titel</th>
+                                <th>Genre</th>
+                                <th>Jaar</th>
+                                <th>Rating</th>
+                                <th>Status</th>
+                                <th>Acties</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>001</td>
+                                <td>Inception</td>
+                                <td>Sci-Fi, Actie</td>
+                                <td>2010</td>
+                                <td>9.3</td>
+                                <td><span class="status-active">Actief</span></td>
+                                <td>
+                                    <button class="btn-edit">Bewerk</button>
+                                    <button class="btn-delete">Verwijder</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>Interstellar</td>
+                                <td>Sci-Fi, Drama</td>
+                                <td>2014</td>
+                                <td>8.7</td>
+                                <td><span class="status-active">Actief</span></td>
+                                <td>
+                                    <button class="btn-edit">Bewerk</button>
+                                    <button class="btn-delete">Verwijder</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>003</td>
+                                <td>The Matrix</td>
+                                <td>Sci-Fi, Actie</td>
+                                <td>1999</td>
+                                <td>8.7</td>
+                                <td><span class="status-active">Actief</span></td>
+                                <td>
+                                    <button class="btn-edit">Bewerk</button>
+                                    <button class="btn-delete">Verwijder</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>004</td>
+                                <td>Dune</td>
+                                <td>Sci-Fi, Avontuur</td>
+                                <td>2021</td>
+                                <td>8.0</td>
+                                <td><span class="status-inactive">Inactief</span></td>
+                                <td>
+                                    <button class="btn-edit">Bewerk</button>
+                                    <button class="btn-delete">Verwijder</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>005</td>
+                                <td>Parasite</td>
+                                <td>Drama, Thriller</td>
+                                <td>2019</td>
+                                <td>8.5</td>
+                                <td><span class="status-active">Actief</span></td>
+                                <td>
+                                    <button class="btn-edit">Bewerk</button>
+                                    <button class="btn-delete">Verwijder</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-actions">
+                    <button class="btn-primary">Film Toevoegen</button>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
