@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - NextFlix</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body class="admin-body">
+    <div class="admin-login-container">
+        <div class="login-box">
+            <h1 class="admin-logo">NextFlix Admin</h1>
+            <h2>Inloggen</h2>
+            
+            <form class="login-form" action="index.html" method="get">
+                <div class="form-group">
+                    <label for="username">Gebruikersnaam</label>
+                    <input type="text" id="username" name="username" required placeholder="Voer gebruikersnaam in">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Wachtwoord</label>
+                    <input type="password" id="password" name="password" required placeholder="Voer wachtwoord in">
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Onthoud mij</label>
+                </div>
+                
+                <button type="submit" class="login-button">Inloggen</button>
+                
+                <div class="login-footer">
+                    <a href="#">Wachtwoord vergeten?</a>
+                    <a href="../index.html">Terug naar website</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
