@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Films Beheren - NextFlix Admin</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body class="admin-body">
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <h2 class="admin-logo">NextFlix Admin</h2>
+            <nav class="admin-nav">
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="manage-movies.html" class="active">Films Beheren</a></li>
+                    <li><a href="about.html">Over Ons</a></li>
+                    <li><a href="../index.html">Terug naar Site</a></li>
+                    <li><a href="login.html">Uitloggen</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="admin-main">
+            <header class="admin-header">
+                <h1>Film Toevoegen / Bewerken</h1>
+                <div class="admin-user">
+                    <span>Admin User</span>
+                </div>
+            </header>
+
+            <section class="movie-form-section">
+                <form class="movie-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="movie-title">Film Titel *</label>
+                            <input type="text" id="movie-title" name="title" required placeholder="Voer film titel in">
+                        </div>
+                        <div class="form-group">
+                            <label for="movie-year">Jaar *</label>
+                            <input type="number" id="movie-year" name="year" required min="1900" max="2024" placeholder="2024">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="movie-genre">Genre(s) *</label>
+                            <select id="movie-genre" name="genre" multiple>
+                                <option value="action">Actie</option>
+                                <option value="comedy">Komedie</option>
+                                <option value="drama">Drama</option>
+                                <option value="horror">Horror</option>
+                                <option value="scifi">Sci-Fi</option>
+                                <option value="thriller">Thriller</option>
+                                <option value="romance">Romantiek</option>
+                                <option value="documentary">Documentaire</option>
+                                <option value="animation">Animatie</option>
+                                <option value="adventure">Avontuur</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="movie-duration">Duur (minuten) *</label>
+                            <input type="number" id="movie-duration" name="duration" required min="1" max="500" placeholder="120">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="movie-director">Regisseur *</label>
+                            <input type="text" id="movie-director" name="director" required placeholder="Christopher Nolan">
+                        </div>
+                        <div class="form-group">
+                            <label for="movie-rating">Rating</label>
+                            <input type="number" id="movie-rating" name="rating" min="0" max="10" step="0.1" placeholder="8.5">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="movie-cast">Cast (gescheiden door komma's)</label>
+                        <input type="text" id="movie-cast" name="cast" placeholder="Leonardo DiCaprio, Marion Cotillard, Tom Hardy">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="movie-plot">Plot Samenvatting *</label>
+                        <textarea id="movie-plot" name="plot" rows="5" required placeholder="Voer een korte samenvatting van de film in..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="movie-poster">Poster URL</label>
+                        <input type="url" id="movie-poster" name="poster" placeholder="https://example.com/poster.jpg">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="movie-trailer">Trailer URL</label>
+                        <input type="url" id="movie-trailer" name="trailer" placeholder="https://youtube.com/watch?v=...">
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="movie-active" name="active" checked>
+                        <label for="movie-active">Film is actief</label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Film Opslaan</button>
+                        <button type="reset" class="btn-secondary">Reset Formulier</button>
+                        <button type="button" class="btn-cancel">Annuleren</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="existing-movies">
+                <h2>Bestaande Films</h2>
+                <div class="admin-search">
+                    <input type="text" placeholder="Zoek films..." class="admin-search-input">
+                    <button class="search-button">Zoeken</button>
+                </div>
+                
+                <div class="table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Titel</th>
+                                <th>Regisseur</th>
+                                <th>Genre</th>
+                                <th>Jaar</th>
+                                <th>Duur</th>
+                                <th>Rating</th>
+                                <th>Status</th>
+                                <th>Acties</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>001</td>
+                                <td>Inception</td>
+                                <td>Christopher Nolan</td>
+                                <td>Sci-Fi, Actie</td>
+                                <td>2010</td>
+                                <td>148 min</td>
+                                <td>9.3</td>
+                                <td><span class="status-active">Actief</span></td>
+                                <td>
+                                    <button class="btn-edit">✏️</button>
+                                    <button class="btn-delete">🗑️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>Interstellar</td>
+                                <td>Christopher Nolan</td>
+                                <td>Sci-Fi, Drama</td>
+                                <td>2014</td>
+                                <td>169 min</td>
+                                <td>8.7</td>
+                                <td><span class="status-active">Actief</span></td>
+                                <td>
+                                    <button class="btn-edit">✏️</button>
+                                    <button class="btn-delete">🗑️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>003</td>
+                                <td>The Matrix</td>
+                                <td>Wachowski Sisters</td>
+                                <td>Sci-Fi, Actie</td>
+                                <td>1999</td>
+                                <td>136 min</td>
+                                <td>8.7</td>
+                                <td><span class="status-active">Actief</span></td>
+                                <td>
+                                    <button class="btn-edit">✏️</button>
+                                    <button class="btn-delete">🗑️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>004</td>
+                                <td>Avatar</td>
+                                <td>James Cameron</td>
+                                <td>Sci-Fi, Avontuur</td>
+                                <td>2009</td>
+                                <td>162 min</td>
+                                <td>7.9</td>
+                                <td><span class="status-active">Actief</span></td>
+                                <td>
+                                    <button class="btn-edit">✏️</button>
+                                    <button class="btn-delete">🗑️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>005</td>
+                                <td>Dune</td>
+                                <td>Denis Villeneuve</td>
+                                <td>Sci-Fi, Avontuur</td>
+                                <td>2021</td>
+                                <td>155 min</td>
+                                <td>8.0</td>
+                                <td><span class="status-inactive">Inactief</span></td>
+                                <td>
+                                    <button class="btn-edit">✏️</button>
+                                    <button class="btn-delete">🗑️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>006</td>
+                                <td>Joker</td>
+                                <td>Todd Phillips</td>
+                                <td>Drama, Thriller</td>
+                                <td>2019</td>
+                                <td>122 min</td>
+                                <td>8.4</td>
+                                <td><span class="status-active">Actief</span></td>
+                                <td>
+                                    <button class="btn-edit">✏️</button>
+                                    <button class="btn-delete">🗑️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>007</td>
+                                <td>Gladiator</td>
+                                <td>Ridley Scott</td>
+                                <td>Actie, Drama</td>
+                                <td>2000</td>
+                                <td>155 min</td>
+                                <td>8.5</td>
+                                <td><span class="status-active">Actief</span></td>
+                                <td>
+                                    <button class="btn-edit">✏️</button>
+                                    <button class="btn-delete">🗑️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>008</td>
+                                <td>Parasite</td>
+                                <td>Bong Joon-ho</td>
+                                <td>Drama, Thriller</td>
+                                <td>2019</td>
+                                <td>132 min</td>
+                                <td>8.5</td>
+                                <td><span class="status-active">Actief</span></td>
+                                <td>
+                                    <button class="btn-edit">✏️</button>
+                                    <button class="btn-delete">🗑️</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
